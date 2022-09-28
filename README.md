@@ -5,6 +5,13 @@ Projeto desenvolvido durante a disciplina de Programação Orientada a Objetos (
   - Compreender as regras de negócio e desenvolver uma solução que atenda-as.
 ## Regras de Negócio:
   - Os animais respeitam uma prioridade de atendimento, no momento do cadastro de uma nova ficha médica, deverá ser determinado uma grau de emergência conforme a tabela abaixo:
+
+  | Prioridade |    Descrição   |
+  |:----------:|:--------------:|
+  |      A     |   Emergência   |
+  |      B     |    Urgência    |
+  |      C     | Pouca Urgência |
+  |      D     |   Não Urgente  | 
   
   - Cada tutor deverá ter uma ficha cadastral, contendo as seguintes informações:
     - Nome;
