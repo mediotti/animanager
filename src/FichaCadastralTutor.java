@@ -29,7 +29,6 @@ public class FichaCadastralTutor extends FichaCadastral implements FichaCadastra
 
     @Override
     public void setEnderecoComplemento(String enderecoComplemento) {
-
     }
 
     @Override
@@ -39,6 +38,5 @@ public class FichaCadastralTutor extends FichaCadastral implements FichaCadastra
 
     @Override
     public void setEnderecoCEP(String enderecoCEP) {
-
     }
 }
