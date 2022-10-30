@@ -1,36 +1,22 @@
-public interface FichaCadastralEndereco {
-    String enderecoRua;
-    String enderecoNum;
-    String enderecoComplemento;
-    String enderecoCEP;
+public class FichaCadastralEndereco {
+    String enderecoRua = "";
+    String enderecoNum = "";
+    String enderecoComplemento = "";
+    String enderecoCEP = "";
 
-    public String getEnderecoRua() {
+    public String getEnderecoRua();
 
-    }
+    public void setEnderecoRua(String enderecoRua);
 
-    public void setEnderecoRua(String enderecoRua) {
-    }
+    public String getEnderecoNum();
 
-    public String getEnderecoNum() {
-    }
+    public void setEnderecoNum(String enderecoNum);
 
-    public void setEnderecoNum(String enderecoNum) {
-        this.enderecoNum = enderecoNum;
-    }
+    public String getEnderecoComplemento();
 
-    public String getEnderecoComplemento() {
-        return enderecoComplemento;
-    }
+    public void setEnderecoComplemento(String enderecoComplemento);
 
-    public void setEnderecoComplemento(String enderecoComplemento) {
-        this.enderecoComplemento = enderecoComplemento;
-    }
+    public String getEnderecoCEP();
 
-    public String getEnderecoCEP() {
-        return enderecoCEP;
-    }
-
-    public void setEnderecoCEP(String enderecoCEP) {
-        this.enderecoCEP = enderecoCEP;
-    }
+    public void setEnderecoCEP(String enderecoCEP);
 }
