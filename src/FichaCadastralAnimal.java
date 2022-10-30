@@ -1,7 +1,4 @@
-public class FichaCadastralTutor extends FichaCadastral{
-    public String tutorTelefone;
-    public FichaCadastralEndereco enderecoFuncionario;
-
+public class FichaCadastralAnimal extends FichaCadastral{
 
     public String getNomeFicha() {
         return null;
