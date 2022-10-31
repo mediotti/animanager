@@ -1,20 +1,22 @@
-public class DBPessoas {
-    FichaCadastralFuncionario funcionariosDB;
-    FichaCadastralTutor tutoresDB;
+import java.util.ArrayList;
 
-    public FichaCadastralFuncionario getFuncionariosDB() {
+public class DBPessoas {
+    ArrayList<FichaCadastralFuncionario> funcionariosDB;
+    ArrayList<FichaCadastralTutor> tutoresDB;
+
+    public ArrayList<FichaCadastralFuncionario> getFuncionariosDB() {
         return funcionariosDB;
     }
 
-    public void setFuncionariosDB(FichaCadastralFuncionario funcionariosDB) {
+    public void setFuncionariosDB(ArrayList<FichaCadastralFuncionario> funcionariosDB) {
         this.funcionariosDB = funcionariosDB;
     }
 
-    public FichaCadastralTutor getTutoresDB() {
+    public ArrayList<FichaCadastralTutor> getTutoresDB() {
         return tutoresDB;
     }
 
-    public void setTutoresDB(FichaCadastralTutor tutoresDB) {
+    public void setTutoresDB(ArrayList<FichaCadastralTutor> tutoresDB) {
         this.tutoresDB = tutoresDB;
     }
 }

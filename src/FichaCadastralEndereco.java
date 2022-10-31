@@ -4,19 +4,44 @@ public class FichaCadastralEndereco {
     String enderecoComplemento = "";
     String enderecoCEP = "";
 
-    public String getEnderecoRua();
+    public String getEnderecoRua(){
+        return enderecoRua;
+    }
 
-    public void setEnderecoRua(String enderecoRua);
+    public String getEnderecoNum(){
+        return enderecoNum;
+    }
 
-    public String getEnderecoNum();
+    public String getEnderecoComplemento(){
+        return enderecoComplemento;
+    }
 
-    public void setEnderecoNum(String enderecoNum);
+    public String getEnderecoCEP(){
+        return enderecoCEP;
+    }
 
-    public String getEnderecoComplemento();
+    public void setEnderecoRua(String enderecoRua){
+        this.enderecoRua = enderecoRua;
+    }
 
-    public void setEnderecoComplemento(String enderecoComplemento);
+    public void setEnderecoNum(String enderecoNum){
+        this.enderecoNum = enderecoNum;
+    }
 
-    public String getEnderecoCEP();
+    public void setEnderecoComplemento(String enderecoComplemento){
+        this.enderecoComplemento = enderecoComplemento;
+    }
 
-    public void setEnderecoCEP(String enderecoCEP);
+    public void setEnderecoCEP(String enderecoCEP){
+        this.enderecoCEP = enderecoCEP;
+    }
+
+    public String toString() {
+        return "FichaCadastralEndereco{" +
+                "enderecoRua='" + enderecoRua + '\'' +
+                ", enderecoNum='" + enderecoNum + '\'' +
+                ", enderecoComplemento='" + enderecoComplemento + '\'' +
+                ", enderecoCEP='" + enderecoCEP + '\'' +
+                '}';
+    }
 }

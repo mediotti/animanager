@@ -1,4 +1,8 @@
 public interface InterfaceMenuCadastro {
-    void inserirNovaFichaCadastral();
-    void removerFichaCadastral();
+    private void inserirNovaFichaCadastral(){
+
+    }
+    private void removerFichaCadastral(){
+
+    }
 }
