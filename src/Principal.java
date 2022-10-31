@@ -8,8 +8,7 @@ public class Principal {
             System.out.println("\n\tSelecione qual menu deseja acessar: ");
             System.out.println("\n\t(A) Menu de Gerenciamento de Fichas Cadastrais de Pessoas");
             System.out.println("\n\t(B) Menu de Gerenciamento de Fichas Cadastrais Animais");
-            System.out.println("\n\t(C) Menu de Gerenciamento de Fichas Médicas");
-            System.out.println("\n\t(D) Menu de Gerenciamento da Fila de Atendimento");
+            System.out.println("\n\t(C) Menu de Gerenciamento de Fichas Médicas e Fila de Atendimento");
             System.out.println("\n\t(X) Sair");
             Leitura leitor = new Leitura();
             Character opcaoMenu = leitor.input("Insira a opcao desejada: ").toLowerCase().charAt(0);
@@ -18,10 +17,10 @@ public class Principal {
                 case 'a':
                     MenuFichaCadastralPessoa menuFichaCadastralPessoa = new MenuFichaCadastralPessoa();                    break;
                 case 'b':
-                    System.out.println("Menu (B): Gerenciamento de Fichas Cadastrais Animais");
+                    MenuFichaCadastralAnimal menuFichaCadastralAnimal = new MenuFichaCadastralAnimal();
                     break;
                 case 'c':
-                    System.out.println("Menu (C): Gerenciamento de Fichas Médicas");
+                    FichaMedicaAnimal novaFichaMedicaAnimal = new FichaMedicaAnimal();
                     break;
                 case 'd':
                     System.out.println("Menu (D): Gerenciamento da Fila de Atendimento");

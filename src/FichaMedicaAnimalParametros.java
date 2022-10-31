@@ -5,43 +5,51 @@ public class FichaMedicaAnimalParametros {
     String pressaoArterial;
     String observacoes;
 
+    Leitura leitor = new Leitura();
+    FichaMedicaAnimalParametros(){
+        setFrequenciaCardiaca();
+        setFrequenciaRespiratoria();
+        setPressaoArterial();
+        setTemperatura();
+        setObservacoes();
+    }
     public Double getTemperatura() {
         return temperatura;
     }
 
-    public void setTemperatura(Double temperatura) {
-        this.temperatura = temperatura;
+    private void setTemperatura() {
+        temperatura = Double.parseDouble(leitor.input("Insira a temperatura do animal: "));
     }
 
     public Integer getFrequenciaCardiaca() {
         return frequenciaCardiaca;
     }
 
-    public void setFrequenciaCardiaca(Integer frequenciaCardiaca) {
-        this.frequenciaCardiaca = frequenciaCardiaca;
-    }
+    private void setFrequenciaCardiaca() {
+        frequenciaCardiaca = Integer.parseInt(leitor.input("Insira a frequencia cardiaca do animal: "));
+        }
 
     public Integer getFrequenciaRespiratoria() {
         return frequenciaRespiratoria;
     }
 
-    public void setFrequenciaRespiratoria(Integer frequenciaRespiratoria) {
-        this.frequenciaRespiratoria = frequenciaRespiratoria;
+    private void setFrequenciaRespiratoria() {
+        frequenciaRespiratoria = Integer.parseInt(leitor.input("Insira a frequencia respiratória do animal: "));
     }
 
     public String getPressaoArterial() {
         return pressaoArterial;
     }
 
-    public void setPressaoArterial(String pressaoArterial) {
-        this.pressaoArterial = pressaoArterial;
+    private void setPressaoArterial() {
+        pressaoArterial = leitor.input("Insira a pressão arterial do animal (e.g. 12x8): ");
     }
 
     public String getObservacoes() {
         return observacoes;
     }
 
-    public void setObservacoes(String observacoes) {
-        this.observacoes = observacoes;
+    private void setObservacoes() {
+        observacoes = leitor.input("Insira as observações, caso tenham: ");
     }
 }
