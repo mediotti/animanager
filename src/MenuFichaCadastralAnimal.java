@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 public class MenuFichaCadastralAnimal implements InterfaceMenuCadastro{
 
     public MenuFichaCadastralAnimal(){

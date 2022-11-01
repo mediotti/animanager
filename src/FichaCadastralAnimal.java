@@ -1,8 +1,11 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 public class FichaCadastralAnimal extends FichaCadastral{
 
     private FichaCadastralAnimalDescricao fichaCadastralAnimalDescricao;
     private String fichaCadastralAnimalTutorResponsavel;
     Leitura leitor = new Leitura();
+    private String fichaID;
 
     public FichaCadastralAnimal(){
         fichaCadastralAnimalDescricao = new FichaCadastralAnimalDescricao();
@@ -28,18 +31,43 @@ public class FichaCadastralAnimal extends FichaCadastral{
         System.out.println("\nInsira as descrições do animal");
         getDescricaoAnimal().setAnimalCadastroEspecie(leitor.input("Insira a espécie do animal: "));
         getDescricaoAnimal().setAnimalCadastroRaca(leitor.input("Insira a raça do animal: "));
-        getDescricaoAnimal().setAnimalCadastroIdade(Integer.parseInt(leitor.input("Insira a idade do animal: ")));
-        getDescricaoAnimal().setAnimalCadastroPeso(Double.parseDouble(leitor.input("Insira o peso do animal: ")));
-        getDescricaoAnimal().setAnimalCadastroSexo(leitor.input("Insira o sexo do animal M/F/A/O: ").charAt(0));
-        getDescricaoAnimal().setAnimalCadastroCastrado(leitor.input("O animal é castrado? S/N: ").charAt(0));
+        try{
+            getDescricaoAnimal().setAnimalCadastroIdade(Integer.parseInt(leitor.input("Insira a idade do animal: ")));
+        }catch (IdadeAnimalNegativaException idadeexc){
+            idadeexc.impIdadeAnimalNegativa();
+        }
+        try{
+            getDescricaoAnimal().setAnimalCadastroPeso(Double.parseDouble(leitor.input("Insira o peso do animal: ")));
+        }catch (PesoAnimalNegativoException pesoexc){
+            pesoexc.impPesoAnimalNegativo();
+        }
+        try {
+            getDescricaoAnimal().setAnimalCadastroSexo(leitor.input("Insira o sexo do animal M/F/A/O: ").toLowerCase().charAt(0));
+        }catch (SexoAnimalIndefinidoException sexoexc){
+            sexoexc.impSexoAnimalIndefinido();
+        }
+        try {
+            getDescricaoAnimal().setAnimalCadastroCastrado(leitor.input("O animal é castrado? S/N: ").charAt(0));
+        } catch (AnimalCastradoIndefinidoException castradoexc){
+            castradoexc.impAnimalCastradoIndefinido();
+        }
     }
 
     public String getNomeFicha() {
         return fichaNome;
     }
+
+    public String getCPFFicha() {
+        return null;
+    }
+
     public void setNomeFicha() {
         fichaNome = leitor.input("Insira o nome do Animal: ");
         System.out.println("Nome inserido: " + getNomeFicha());
+    }
+
+    public void setCPFFicha() throws CpfDiferente11AlgarismosException {
+
     }
 
     public String getIdFicha() {
@@ -49,4 +77,6 @@ public class FichaCadastralAnimal extends FichaCadastral{
         fichaID = leitor.input("Insira o ID da ficha do Animal: ");
         System.out.println("ID inserido: " + getIdFicha());
     }
+
+
 }

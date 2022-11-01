@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 public class Principal {
     public static void main(String[] args) {
         System.out.println("\n\tBem vindo ao Sistema de Gerenciamento do Departamento de Emergências Veterinárias!");
@@ -15,12 +17,13 @@ public class Principal {
 
             switch (opcaoMenu){
                 case 'a':
-                    MenuFichaCadastralPessoa menuFichaCadastralPessoa = new MenuFichaCadastralPessoa();                    break;
+                    MenuFichaCadastralPessoa menuFichaCadastralPessoa = new MenuFichaCadastralPessoa();
+                    break;
                 case 'b':
                     MenuFichaCadastralAnimal menuFichaCadastralAnimal = new MenuFichaCadastralAnimal();
                     break;
                 case 'c':
-                    FichaMedicaAnimal novaFichaMedicaAnimal = new FichaMedicaAnimal();
+                    FilaDeAtendimento novaFilaDeAtendimento = new FilaDeAtendimento();
                     break;
                 case 'd':
                     System.out.println("Menu (D): Gerenciamento da Fila de Atendimento");

@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 public class FichaCadastralEndereco {
     String enderecoRua = "";
     String enderecoNum = "";
@@ -32,7 +34,10 @@ public class FichaCadastralEndereco {
         this.enderecoComplemento = enderecoComplemento;
     }
 
-    public void setEnderecoCEP(String enderecoCEP){
+    public void setEnderecoCEP(String enderecoCEP) throws CepDiferente8AlgarismosException{
+        if (enderecoCEP.length() != 8){
+            throw new CepDiferente8AlgarismosException();
+        }
         this.enderecoCEP = enderecoCEP;
     }
 
