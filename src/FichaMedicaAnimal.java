@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 import java.util.ArrayList;
 
 public class FichaMedicaAnimal {
@@ -6,8 +8,8 @@ public class FichaMedicaAnimal {
     Character animalFichaSetor;
     Character animalFichaBaia;
     String animalFichaResponsavel;
-    ArrayList<String> animalFichaSintomas;
-    ArrayList<String> animalFichaProcedimentosRealizados;
+    ArrayList<String> animalFichaSintomas = new ArrayList<>();
+    ArrayList<String> animalFichaProcedimentosRealizados = new ArrayList<>();
     Character animalFichaStatus;
     FichaMedicaAnimalParametros animalFichaParametros;
 
@@ -79,6 +81,7 @@ public class FichaMedicaAnimal {
 
     public void setAnimalFichaSintomas() {
         char repetirSintomas = 'n';
+        animalFichaSintomas.add("");
         do {
             animalFichaSintomas.add(leitor.input("Insira o procedimento realizado: "));
             System.out.println("Inserir novo sintoma: ");

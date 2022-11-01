@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 public class FichaCadastralAnimalDescricao {
     String animalCadastroEspecie;
     String animalCadastroRaca;
@@ -26,7 +28,10 @@ public class FichaCadastralAnimalDescricao {
         return animalCadastroIdade;
     }
 
-    public void setAnimalCadastroIdade(Integer animalCadastroIdade) {
+    public void setAnimalCadastroIdade(Integer animalCadastroIdade) throws IdadeAnimalNegativaException {
+        if (animalCadastroIdade < 0){
+            throw new IdadeAnimalNegativaException();
+        }
         this.animalCadastroIdade = animalCadastroIdade;
     }
 
@@ -34,7 +39,10 @@ public class FichaCadastralAnimalDescricao {
         return animalCadastroPeso;
     }
 
-    public void setAnimalCadastroPeso(Double animalCadastroPeso) {
+    public void setAnimalCadastroPeso(Double animalCadastroPeso) throws PesoAnimalNegativoException {
+        if (animalCadastroPeso < 0){
+            throw new PesoAnimalNegativoException();
+        }
         this.animalCadastroPeso = animalCadastroPeso;
     }
 
@@ -42,15 +50,25 @@ public class FichaCadastralAnimalDescricao {
         return animalCadastroSexo;
     }
 
-    public void setAnimalCadastroSexo(Character animalCadastroSexo) {
-        this.animalCadastroSexo = animalCadastroSexo;
+    public void setAnimalCadastroSexo(Character animalCadastroSexo) throws SexoAnimalIndefinidoException {
+        if (animalCadastroSexo.equals('m') || animalCadastroSexo.equals('f') || animalCadastroSexo.equals('a')){
+            this.animalCadastroSexo = animalCadastroSexo;
+        }else {
+            this.animalCadastroSexo = 'o';
+            throw new SexoAnimalIndefinidoException();
+        }
     }
 
     public Character getAnimalCadastroCastrado() {
         return animalCadastroCastrado;
     }
 
-    public void setAnimalCadastroCastrado(Character animalCadastroCastrado) {
-        this.animalCadastroCastrado = animalCadastroCastrado;
+    public void setAnimalCadastroCastrado(Character animalCadastroCastrado) throws AnimalCastradoIndefinidoException {
+        if (animalCadastroCastrado.equals('s') || animalCadastroCastrado.equals('n')){
+            this.animalCadastroCastrado = animalCadastroCastrado;
+        }else {
+            this.animalCadastroCastrado = 'n';
+            throw new AnimalCastradoIndefinidoException();
+        }
     }
 }

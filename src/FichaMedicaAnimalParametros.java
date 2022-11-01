@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 public class FichaMedicaAnimalParametros {
     Double temperatura;
     Integer frequenciaCardiaca;

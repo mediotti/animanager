@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 public class FichaCadastralFuncionario extends FichaCadastral {
     public String setorFuncionario;
     public String cargoFuncionario;
@@ -7,7 +9,11 @@ public class FichaCadastralFuncionario extends FichaCadastral {
 
     public FichaCadastralFuncionario(){
         enderecoFuncionario = new FichaCadastralEndereco();
-        setIdFicha();
+        try {
+            setCPFFicha();
+        }catch (CpfDiferente11AlgarismosException cpfdiffexc){
+            cpfdiffexc.impCpfDiferente();
+        }
         setNomeFicha();
         setCargoFuncionario(leitor.input("Insira o cargo do funcionário: "));
         setSetorFuncionario(leitor.input("Insira o setor de operação do funcionário: "));
@@ -41,15 +47,19 @@ public class FichaCadastralFuncionario extends FichaCadastral {
         getEnderecoFuncionario().setEnderecoRua(leitor.input("Insira a rua: "));
         getEnderecoFuncionario().setEnderecoNum(leitor.input("Insira o numero: "));
         getEnderecoFuncionario().setEnderecoComplemento(leitor.input("Insira o complemento: "));
-        getEnderecoFuncionario().setEnderecoCEP(leitor.input("Insira o CEP: "));
+        try {
+            getEnderecoFuncionario().setEnderecoCEP(leitor.input("Insira o CEP: "));
+        } catch (CepDiferente8AlgarismosException cepdiffexc){
+            cepdiffexc.impCepDiferente();
+        }
     }
 
     public String getNomeFicha() {
         return fichaNome;
     }
 
-    public String getIdFicha() {
-        return fichaID;
+    public String getCPFFicha() {
+        return fichaCPF;
     }
 
     public void setNomeFicha() {
@@ -57,8 +67,11 @@ public class FichaCadastralFuncionario extends FichaCadastral {
         System.out.println("Nome inserido: " + getNomeFicha());
     }
 
-    public void setIdFicha() {
-        fichaID = leitor.input("Insira o ID da ficha do Funcionario: ");
-        System.out.println("ID inserido: " + getIdFicha());
+    public void setCPFFicha() throws CpfDiferente11AlgarismosException {
+        fichaCPF = leitor.input("Insira o CPF da ficha do Funcionario: ");
+        if (fichaCPF.length() != 11){
+            throw new CpfDiferente11AlgarismosException();
+        }
+        System.out.println("CPF inserido: " + getCPFFicha());
     }
 }

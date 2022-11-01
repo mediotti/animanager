@@ -1,3 +1,5 @@
+//Nome: Gabriel Mediotti Marques
+//RA: 2266377
 import java.util.ArrayList;
 
 public class DBPessoas {
