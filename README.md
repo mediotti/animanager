@@ -41,5 +41,5 @@ Projeto desenvolvido durante a disciplina de Programação Orientada a Objetos (
       - Status;
   
 ##Decisões de Negócios do Projeto
-- No procedimento de edição de fichas médicas (fichas referentes aos pacientes durante o atendimento deles), será possível somente alterar a *Prioridade* e o *Status* dessas fichas.
-- A maioria das janelas do projeto contam com um botão *"Cancelar"*, ele será responsável por retornar ao menu inicial do programa.
+- No procedimento de edição de fichas médicas (fichas referentes aos pacientes durante o atendimento deles), será possível somente alterar a **Prioridade** e o **Status** dessas fichas.
+- A maioria das janelas do projeto contam com um botão **"Cancelar"**, ele será responsável por retornar ao menu inicial do programa.
