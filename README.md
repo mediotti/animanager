@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Internos de um Hospital Veterinário
+# Animanager - Sistema de Gerenciamento de Internos de um Hospital Veterinário
 Projeto desenvolvido durante a disciplina de Programação Orientada a Objetos (AS32A)
 ## Objetivos Gerais:
   - Aplicar os conceitos da Programação Orientada a Objetos em um projeto prático;
